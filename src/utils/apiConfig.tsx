@@ -1,0 +1,10 @@
+let API_URL = 'http://localhost:3000/api/v1/';
+let AUTHORIZATION_HEADER = 'Authorization';
+let AUTHTOKEN = 'TELLUS_AUTH_TOKEN';
+let REFRESHTOKEN ="TELLUS_REFRESH_TOKEN";
+export {
+  API_URL,
+  AUTHORIZATION_HEADER,
+  AUTHTOKEN,
+  REFRESHTOKEN
+};
