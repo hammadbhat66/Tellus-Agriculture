@@ -25,15 +25,19 @@ export const auth = createSlice({
   name: "auth",
   initialState,
   reducers: {
-   
+      loginEmulate: (state) => {
+        state.loggedIn = true;
+      },
+      logoutEmulate: (state) => {
+        state.loggedIn = false;
+      }
   },
-  extraReducers: (builder) => {
+  extraReducers: () => {
     // Add reducers for additional action types here, and handle loading state as needed
-   
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {  } = auth.actions;
+export const { loginEmulate, logoutEmulate } = auth.actions;
 
 export default auth.reducer;

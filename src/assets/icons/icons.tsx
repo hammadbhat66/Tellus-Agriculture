@@ -1,0 +1,12 @@
+export const PlusWhiteIcon = require('./pluswhite/pluswhite.png');
+export const FemaleIcon = require('./female/female.png');
+export const MaleIcon = require('./male/male.png');
+export const HamburgerIcon = require('./hamburger/hamburger.png');
+export const SearchIcon = require('./search/search.png');
+export const HerdIcon = require('./herd/herd.png');
+export const EventsIcon = require('./events/events.png');
+export const InventoryIcon = require('./inventory/inventory.png');
+export const InsightsIcon = require('./insights/insights.png');
+export const BackIcon = require('./back/back.png');
+export const GreenTickIcon = require('./greentick/greentick.png');
+export const WeightIcon = require('./weight/weight.png');

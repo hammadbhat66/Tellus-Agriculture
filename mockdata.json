@@ -1,0 +1,493 @@
+{
+  "mockCows": [
+    {
+      "id": "8942",
+      "status": "Healthy",
+      "location": "North Pen 01",
+      "lastEvent": "Vaccination",
+      "lastEventDate": "Oct 24, 2023",
+      "gender": "female",
+      "weight": 1248,
+      "dailyGain": 2.4,
+      "sex": "Heifer",
+      "pen": "East-04",
+      "breed": "Angus",
+      "age": "22 Mo.",
+      "lastInspection": "Today, 06:45 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "4412",
+      "status": "In Treatment",
+      "location": "Isolation Unit A",
+      "lastEvent": "Hoof Check",
+      "lastEventDate": "Nov 02, 2023",
+      "gender": "male",
+      "weight": 1350,
+      "dailyGain": 1.8,
+      "sex": "Bull",
+      "pen": "North-02",
+      "breed": "Hereford",
+      "age": "18 Mo.",
+      "lastInspection": "Yesterday, 14:30 PM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "9011",
+      "status": "Active",
+      "location": "South Pasture",
+      "lastEvent": "Weigh-in",
+      "lastEventDate": "Oct 28, 2023",
+      "gender": "female",
+      "weight": 1180,
+      "dailyGain": 2.1,
+      "sex": "Heifer",
+      "pen": "South-01",
+      "breed": "Charolais",
+      "age": "24 Mo.",
+      "lastInspection": "2 days ago, 09:15 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "2239",
+      "status": "Active",
+      "location": "Calf Nursery",
+      "lastEvent": "Birth Recorded",
+      "lastEventDate": "Nov 05, 2023",
+      "gender": "female",
+      "weight": 980,
+      "dailyGain": 2.8,
+      "sex": "Heifer",
+      "pen": "Calf-01",
+      "breed": "Simmental",
+      "age": "8 Mo.",
+      "lastInspection": "Today, 08:00 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "7761",
+      "status": "Active",
+      "location": "West Gate Pen",
+      "lastEvent": "Transported",
+      "lastEventDate": "Oct 15, 2023",
+      "gender": "male",
+      "weight": 1420,
+      "dailyGain": 1.9,
+      "sex": "Bull",
+      "pen": "West-03",
+      "breed": "Limousin",
+      "age": "30 Mo.",
+      "lastInspection": "3 days ago, 16:45 PM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "5521",
+      "status": "Prime Bull",
+      "location": "Show Rotation",
+      "lastEvent": "Health Certification",
+      "lastEventDate": "Today",
+      "gender": "male",
+      "weight": 1650,
+      "dailyGain": 1.5,
+      "sex": "Bull",
+      "pen": "Show-01",
+      "breed": "Wagyu",
+      "age": "36 Mo.",
+      "lastInspection": "Today, 07:30 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+      
+    },
+    {
+      "id": "3345",
+      "status": "Healthy",
+      "location": "East Pasture",
+      "lastEvent": "Grazing Check",
+      "lastEventDate": "Nov 10, 2023",
+      "gender": "female",
+      "weight": 1120,
+      "dailyGain": 2.6,
+      "sex": "Heifer",
+      "pen": "East-01",
+      "breed": "Brahman",
+      "age": "20 Mo.",
+      "lastInspection": "Yesterday, 10:30 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "6789",
+      "status": "Active",
+      "location": "Central Barn",
+      "lastEvent": "Feeding",
+      "lastEventDate": "Nov 08, 2023",
+      "gender": "male",
+      "weight": 1580,
+      "dailyGain": 2.0,
+      "sex": "Bull",
+      "pen": "Central-02",
+      "breed": "Gelbvieh",
+      "age": "28 Mo.",
+      "lastInspection": "2 days ago, 11:15 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "1122",
+      "status": "In Treatment",
+      "location": "Medical Bay",
+      "lastEvent": "Medication",
+      "lastEventDate": "Nov 07, 2023",
+      "gender": "female",
+      "weight": 1050,
+      "dailyGain": 1.2,
+      "sex": "Heifer",
+      "pen": "Medical-01",
+      "breed": "Shorthorn",
+      "age": "16 Mo.",
+      "lastInspection": "Today, 09:00 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+     {
+      "id": "2345",
+      "status": "Prime Bull",
+      "location": "Breeding Center",
+      "lastEvent": "Breeding Assessment",
+      "lastEventDate": "Nov 04, 2023",
+      "gender": "male",
+      "weight": 1720,
+      "dailyGain": 1.4,
+      "sex": "Bull",
+      "pen": "Breed-01",
+      "breed": "Charolais",
+      "age": "42 Mo.",
+      "lastInspection": "Today, 08:15 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "4455",
+      "status": "Healthy",
+      "location": "West Meadow",
+      "lastEvent": "Water Check",
+      "lastEventDate": "Nov 06, 2023",
+      "gender": "male",
+      "weight": 1320,
+      "dailyGain": 2.3,
+      "sex": "Bull",
+      "pen": "West-01",
+      "breed": "Red Angus",
+      "age": "24 Mo.",
+      "lastInspection": "Yesterday, 15:45 PM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "7890",
+      "status": "Active",
+      "location": "South Field",
+      "lastEvent": "Pasture Rotation",
+      "lastEventDate": "Nov 05, 2023",
+      "gender": "female",
+      "weight": 1280,
+      "dailyGain": 2.7,
+      "sex": "Heifer",
+      "pen": "South-02",
+      "breed": "Simmental",
+      "age": "26 Mo.",
+      "lastInspection": "3 days ago, 13:20 PM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+   
+    {
+      "id": "5678",
+      "status": "Healthy",
+      "location": "North Ridge",
+      "lastEvent": "Health Exam",
+      "lastEventDate": "Nov 03, 2023",
+      "gender": "female",
+      "weight": 1160,
+      "dailyGain": 2.5,
+      "sex": "Heifer",
+      "pen": "North-03",
+      "breed": "Hereford",
+      "age": "19 Mo.",
+      "lastInspection": "Yesterday, 12:00 PM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "9012",
+      "status": "Active",
+      "location": "East Valley",
+      "lastEvent": "Mineral Supplement",
+      "lastEventDate": "Nov 02, 2023",
+      "gender": "male",
+      "weight": 1480,
+      "dailyGain": 2.1,
+      "sex": "Bull",
+      "pen": "East-02",
+      "breed": "Limousin",
+      "age": "32 Mo.",
+      "lastInspection": "4 days ago, 14:30 PM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "3456",
+      "status": "Healthy",
+      "location": "West Hill",
+      "lastEvent": "Parasite Control",
+      "lastEventDate": "Nov 01, 2023",
+      "gender": "female",
+      "weight": 1220,
+      "dailyGain": 2.4,
+      "sex": "Heifer",
+      "pen": "West-02",
+      "breed": "Angus",
+      "age": "21 Mo.",
+      "lastInspection": "Today, 11:45 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    },
+    {
+      "id": "6781",
+      "status": "In Treatment",
+      "location": "Recovery Pen",
+      "lastEvent": "Wound Care",
+      "lastEventDate": "Oct 31, 2023",
+      "gender": "male",
+      "weight": 1380,
+      "dailyGain": 1.6,
+      "sex": "Bull",
+      "pen": "Recovery-01",
+      "breed": "Gelbvieh",
+      "age": "25 Mo.",
+      "lastInspection": "Today, 10:00 AM",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlIRUZwA-0e8lfIA7a0zbeBVHMUywL6yNb5xxtebEoRBoVC0byjW7YekvyHdLcbhvQbc_dMkXZiXdZVWtu_dBgoewpplgiebyQcrluTlh1Jd1UxOwqDFKHwLNKu2n7zANGFaYtj9x4xPGmKCqjCfgdpSvWIdICxXnH0fM9ccQ9G4uzrRdyP1v_PbQplUt-5NzVbGXH4_dxgeFSLkNcHd2RoLb-YfqWGmnDKNeLUN5bKjwXR4ehcensn7aXPZe4we_ID6SIq6lAUJ0",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCppPrPaqxwI3fm0k55qPStbJX25skst_v-f4I87sL7ZWLZaq0RjrgpERG9bp5FSDn0cS4os2d0u0uJNUXebpktSQPTJ_ANOKCI1Cg1W2LnaNKLei7hp4bUUIzjf7zbDAMzW2yu8TXMuOwc4rjchabbyPWQ7u8Rl1zYdQZRXKNkhtzx2sMv5mDEpHwhxziGoKnwrubo8WNiG5Fwld_68SEozvjKoY12kyL5kXsOFKJrePMD-nFRV6DwXommWhadLkrHG0z1PT1yFCA"
+    }
+  ],
+  "mockEvents": {
+    "8942": [
+      {
+        "id": 1,
+        "title": "Weight Check",
+        "date": "Oct 24, 2023",
+        "description": "Manual weigh-in recorded. Consistent growth curve maintained.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998493.png",
+        "iconBg": "#bcf0ae",
+        "iconColor": "#23501e"
+      },
+      {
+        "id": 2,
+        "title": "Vaccination",
+        "date": "Oct 18, 2023",
+        "description": "Routine vaccination administered. No adverse reactions observed.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/2491/2491488.png",
+        "iconBg": "#ffdcc5",
+        "iconColor": "#713700",
+        "tag": "Administered: BVD"
+      },
+      {
+        "id": 3,
+        "title": "Pen Change",
+        "date": "Oct 05, 2023",
+        "description": "Moved from South-01 to East-04 for seasonal rotation.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/2919/2919594.png",
+        "iconBg": "#e4e2e2",
+        "iconColor": "#646464"
+      }
+    ],
+    "4412": [
+      {
+        "id": 1,
+        "title": "Hoof Check",
+        "date": "Nov 02, 2023",
+        "description": "Routine hoof inspection completed. Minor trimming performed.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998493.png",
+        "iconBg": "#bcf0ae",
+        "iconColor": "#23501e"
+      },
+      {
+        "id": 2,
+        "title": "Treatment",
+        "date": "Oct 28, 2023",
+        "description": "Antibiotic treatment for hoof infection initiated.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/2491/2491488.png",
+        "iconBg": "#ffdcc5",
+        "iconColor": "#713700",
+        "tag": "Administered: Penicillin"
+      }
+    ],
+    "9011": [
+      {
+        "id": 1,
+        "title": "Weigh-in",
+        "date": "Oct 28, 2023",
+        "description": "Monthly weight measurement taken. Growth on track.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998493.png",
+        "iconBg": "#bcf0ae",
+        "iconColor": "#23501e"
+      }
+    ],
+    "2239": [
+      {
+        "id": 1,
+        "title": "Birth Recorded",
+        "date": "Nov 05, 2023",
+        "description": "Calf birth successfully recorded in system.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1995/1995535.png",
+        "iconBg": "#bcf0ae",
+        "iconColor": "#23501e"
+      }
+    ],
+    "7761": [
+      {
+        "id": 1,
+        "title": "Transported",
+        "date": "Oct 15, 2023",
+        "description": "Moved to new facility for breeding program.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1524/1524842.png",
+        "iconBg": "#e4e2e2",
+        "iconColor": "#646464"
+      }
+    ],
+    "5521": [
+      {
+        "id": 1,
+        "title": "Health Certification",
+        "date": "Today",
+        "description": "Annual health certification completed for show eligibility.",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828652.png",
+        "iconBg": "#bcf0ae",
+        "iconColor": "#23501e"
+      }
+    ]
+  },
+  "3345": [
+    {
+      "id": 1,
+      "title": "Grazing Check",
+      "date": "Nov 10, 2023",
+      "description": "Pasture condition assessed. Grass quality excellent.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/2913/2913146.png",
+      "iconBg": "#bcf0ae",
+      "iconColor": "#23501e"
+    }
+  ],
+  "6789": [
+    {
+      "id": 1,
+      "title": "Feeding",
+      "date": "Nov 08, 2023",
+      "description": "Daily feed ration administered successfully.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/921/921489.png",
+      "iconBg": "#bcf0ae",
+      "iconColor": "#23501e"
+    }
+  ],
+  "1122": [
+    {
+      "id": 1,
+      "title": "Medication",
+      "date": "Nov 07, 2023",
+      "description": "Antibiotics administered for respiratory infection.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/2491/2491488.png",
+      "iconBg": "#ffdcc5",
+      "iconColor": "#713700",
+      "tag": "Administered: Amoxicillin"
+    }
+  ],
+  "4455": [
+    {
+      "id": 1,
+      "title": "Water Check",
+      "date": "Nov 06, 2023",
+      "description": "Water trough levels verified and replenished.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/821/821639.png",
+      "iconBg": "#bcf0ae",
+      "iconColor": "#23501e"
+    }
+  ],
+  "7890": [
+    {
+      "id": 1,
+      "title": "Pasture Rotation",
+      "date": "Nov 05, 2023",
+      "description": "Moved to fresh pasture for optimal grazing.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3774/3774615.png",
+      "iconBg": "#e4e2e2",
+      "iconColor": "#646464"
+    }
+  ],
+  "2345": [
+    {
+      "id": 1,
+      "title": "Breeding Assessment",
+      "date": "Nov 04, 2023",
+      "description": "Genetic evaluation completed for breeding program.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3050/3050159.png",
+      "iconBg": "#bcf0ae",
+      "iconColor": "#23501e"
+    }
+  ],
+  "5678": [
+    {
+      "id": 1,
+      "title": "Health Exam",
+      "date": "Nov 03, 2023",
+      "description": "Comprehensive health check passed with flying colors.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/833/833472.png",
+      "iconBg": "#bcf0ae",
+      "iconColor": "#23501e"
+    }
+  ],
+  "9012": [
+    {
+      "id": 1,
+      "title": "Mineral Supplement",
+      "date": "Nov 02, 2023",
+      "description": "Trace minerals added to daily feed ration.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3050/3050159.png",
+      "iconBg": "#bcf0ae",
+      "iconColor": "#23501e"
+    }
+  ],
+  "3456": [
+    {
+      "id": 1,
+      "title": "Parasite Control",
+      "date": "Nov 01, 2023",
+      "description": "Deworming treatment administered preventively.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3868/3868552.png",
+      "iconBg": "#ffdcc5",
+      "iconColor": "#713700",
+      "tag": "Administered: Ivermectin"
+    }
+  ],
+  "6781": [
+    {
+      "id": 1,
+      "title": "Wound Care",
+      "date": "Oct 31, 2023",
+      "description": "Wound dressing changed and healing monitored.",
+      "icon": "https://cdn-icons-png.flaticon.com/512/2912/2912036.png",
+      "iconBg": "#ffdcc5",
+      "iconColor": "#713700"
+    }
+  ],
+  "filterOptions": [
+    "All Animals",
+    "Active",
+    "In Treatment",
+    "Prime Bull"
+  ]
+}
