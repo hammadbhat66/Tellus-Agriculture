@@ -29,25 +29,47 @@ const CowCard = ({ item }: CowCardProps) => {
   const navigateToCowDetails = () => {
     navigation.navigate(screenNames.COW_DETAILS, { cowId: item.id });
   };
-  const localTheme = item.status === "Prime Bull"? {
-    backgroundColor: color.primary,
-    tagBg: color.primaryContainer,
-    tagTxt: color.primaryFixed,
-    titleTxt: color.surfaceContainerHighest,
-    detailTxt: color.surfaceContainerLowest
-  }:{
-    backgroundColor:color.surfaceContainerLowest,
-    tagBg: color.surfaceContainerHighest,
-    tagTxt: color.primary,
-    titleTxt: color.onSurfaceVariant,
-    detailTxt: color.onSurface
-    
-  }
+  const localTheme = () => {
+    switch (item.status) {
+      case 'Prime Bull':
+        return {
+          backgroundColor: color.primary,
+          tagBg: color.primaryContainer,
+          tagTxt: color.primaryFixed,
+          titleTxt: color.surfaceContainerHighest,
+          detailTxt: color.surfaceContainerLowest,
+        };
+      case 'Deceased':
+        return {
+          backgroundColor: color.surfaceContainerLowest,
+          tagBg: color.surfaceContainerHighest,
+          tagTxt: color.primary,
+          titleTxt: color.onSurfaceVariant,
+          detailTxt: color.onSurface,
+        };
+      default:
+        return {
+          backgroundColor: color.surfaceContainerLowest,
+          tagBg: color.surfaceContainerHighest,
+          tagTxt: color.primary,
+          titleTxt: color.onSurfaceVariant,
+          detailTxt: color.onSurface,
+        };
+    }
+  };
+
   return (
-    <Pressable style={[styles.cowCard,{backgroundColor:localTheme.backgroundColor}]} onPress={navigateToCowDetails}>
+    <Pressable
+      style={[styles.cowCard, { backgroundColor: localTheme().backgroundColor }]}
+      onPress={navigateToCowDetails}
+    >
       <View style={styles.cardHeader}>
-        <View style={[styles.tagContainer,{backgroundColor:localTheme.tagBg}]}>
-          <Text style={[styles.tagNumber,{color:localTheme.tagTxt}]}>#{item.id}</Text>
+        <View
+          style={[styles.tagContainer, { backgroundColor: localTheme().tagBg }]}
+        >
+          <Text style={[styles.tagNumber, { color: localTheme().tagTxt }]}>
+            #{item.id}
+          </Text>
         </View>
         <View style={styles.statusContainer}>
           <Text
@@ -70,14 +92,22 @@ const CowCard = ({ item }: CowCardProps) => {
       </View>
 
       <View style={styles.locationSection}>
-        <Text style={[styles.label,{color:localTheme.titleTxt}]}>Location</Text>
-        <Text style={[styles.locationText,{color:localTheme.detailTxt}]}>{item.location}</Text>
+        <Text style={[styles.label, { color: localTheme().titleTxt }]}>
+          Location
+        </Text>
+        <Text style={[styles.locationText, { color: localTheme().detailTxt }]}>
+          {item.location}
+        </Text>
       </View>
 
       <View style={styles.eventSection}>
         <View style={styles.eventInfo}>
-          <Text style={[styles.label,{color:localTheme.titleTxt}]}>Last Event</Text>
-          <Text style={[styles.eventText,{color:localTheme.detailTxt}]}>{item.lastEvent}</Text>
+          <Text style={[styles.label, { color: localTheme().titleTxt }]}>
+            Last Event
+          </Text>
+          <Text style={[styles.eventText, { color: localTheme().detailTxt }]}>
+            {item.lastEvent}
+          </Text>
         </View>
         <Text style={styles.eventDate}>{item.lastEventDate}</Text>
       </View>

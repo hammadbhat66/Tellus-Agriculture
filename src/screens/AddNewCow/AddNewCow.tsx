@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
   Text,
@@ -8,15 +8,19 @@ import {
   Pressable,
   Image,
   Dimensions,
-  Alert
+  Alert,
+  Keyboard,
+  Platform
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import color from '../../utils/theme/colors';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { BackIcon } from '../../assets/icons/icons';
+import { BackIcon, CameraIcon, GalleryIcon } from '../../assets/icons/icons';
 import AppBar from '../../sharedComponents/AppBar';
 import CustomDropdown from '../../sharedComponents/CustomDropdown';
 import SexToggle from '../../sharedComponents/SexToggle';
+import BottomSheet from '../../sharedComponents/BottomSheet';
+import { CowTwoImage } from '../../assets/images/images';
 
 type FormData = {
   tag: string;
@@ -30,6 +34,9 @@ const { width: screenWidth } = Dimensions.get('window');
 
 const AddNewCow = () => {
   const navigation = useNavigation();
+  const scrollViewRef = useRef<ScrollView>(null);
+  const bottomSheetRef = useRef<any>(null);
+  const [keyboardHeight, setKeyboardHeight] = useState(0);
   const [formData, setFormData] = useState<FormData>({
     tag: '',
     gender: 'female',
@@ -39,6 +46,34 @@ const AddNewCow = () => {
   });
   const [showPenDropdown, setShowPenDropdown] = useState(false);
   const [showStatusDropdown, setShowStatusDropdown] = useState(false);
+
+  useEffect(() => {
+    const keyboardWillShowListener = Keyboard.addListener(
+      Platform.OS === 'ios' ? 'keyboardWillShow' : 'keyboardDidShow',
+      (e) => {
+        setKeyboardHeight(e.endCoordinates.height);
+      }
+    );
+
+    const keyboardWillHideListener = Keyboard.addListener(
+      Platform.OS === 'ios' ? 'keyboardWillHide' : 'keyboardDidHide',
+      () => {
+        setKeyboardHeight(0);
+      }
+    );
+
+    return () => {
+      keyboardWillShowListener.remove();
+      keyboardWillHideListener.remove();
+    };
+  }, []);
+
+  const scrollToInput = (inputY: number) => {
+    if (scrollViewRef.current) {
+      const scrollY = inputY - 0; // Increased offset to show more space above input
+      scrollViewRef.current.scrollTo({ y: Math.max(0, scrollY), animated: true });
+    }
+  };
 
   const handleInputChange = <K extends keyof FormData>(field: K, value: FormData[K]) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -62,151 +97,184 @@ const AddNewCow = () => {
       <View style={styles.appBar}>
         <AppBar leftIcon={BackIcon} leftIconPress={() => navigation.goBack()} />
       </View>
+      <View style={styles.keyboardAvoidingView}>
+        <ScrollView 
+          ref={scrollViewRef}
+          style={styles.scrollView} 
+          contentContainerStyle={[styles.scrollContent, { paddingBottom: keyboardHeight + 100 }]}
+          contentInsetAdjustmentBehavior="automatic"
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        >
+          {/* Header Section */}
+          <View style={styles.headerSection}>
+            <Text style={styles.headerLabel}>New Entry</Text>
+            <Text style={styles.headerTitle}>Record Cow Data</Text>
+            <Text style={styles.headerDescription}>
+              Add a new member to your herd record. All data is synchronized to the central steward dashboard immediately.
+            </Text>
+          </View>
 
-      <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
-        {/* Header Section */}
-        <View style={styles.headerSection}>
-          <Text style={styles.headerLabel}>New Entry</Text>
-          <Text style={styles.headerTitle}>Record Cow Data</Text>
-          <Text style={styles.headerDescription}>
-            Add a new member to your herd record. All data is synchronized to the central steward dashboard immediately.
-          </Text>
-        </View>
-
-        <View style={styles.mainGrid}>
-          {/* Left Column - Form */}
-          <View style={styles.formColumn}>
-            {/* Photo Upload Section */}
-            <View style={styles.photoSection}>
-              <Text style={styles.sectionLabel}>Upload Cow Photo</Text>
-              <Pressable style={styles.photoUpload}>
-                {/* <Icon name="add-a-photo" size={48} color={color.onSurfaceVariant} /> */}
-                <Text style={styles.photoText}>Tap to upload photo</Text>
-              </Pressable>
-              <Text style={styles.photoHint}>
-                Clear visual records help in quick identification during field inspections.
-              </Text>
-            </View>
-
-            {/* Tag Number */}
-            <View style={styles.field}>
-              <Text style={styles.label}>
-                Tag Number <Text style={styles.required}>*</Text>
-              </Text>
-              <TextInput
-                style={styles.input}
-                value={formData.tag}
-                onChangeText={(value) => handleInputChange('tag', value)}
-                placeholder="e.g. AG-7429"
-                placeholderTextColor={color.onSurfaceVariant}
-              />
-              <Text style={styles.fieldHint}>
-                The unique identifier visible on the animal's ear tag.
-              </Text>
-            </View>
-
-            {/* Demographic Row */}
-            <View style={styles.row}>
-              <View style={styles.halfField}>
-                <Text style={styles.label}>Gender</Text>
-                <SexToggle
-                  value={formData.gender}
-                  onChange={(value) => handleInputChange('gender', value)}
-                />
+          <View style={styles.mainGrid}>
+            {/* Left Column - Form */}
+            <View style={styles.formColumn}>
+              {/* Photo Upload Section */}
+              <View style={styles.photoSection}>
+                <Text style={styles.sectionLabel}>Upload Cow Photo</Text>
+                <Pressable style={styles.photoUpload} onPress={() => bottomSheetRef.current?.open()}>
+                  <View style={styles.photoUploadIconPlaceholder} >
+                    <Image source={CameraIcon}  />
+                  </View>
+                  <Text style={styles.photoText}>Tap to upload photo</Text>
+                </Pressable>
+                <Text style={styles.photoHint}>
+                  Clear visual records help in quick identification during field inspections.
+                </Text>
               </View>
-              <View style={styles.halfField}>
-                <Text style={styles.label}>Weight (kg)</Text>
+
+              {/* Tag Number */}
+              <View style={styles.field}>
+                <Text style={styles.label}>
+                  Tag Number <Text style={styles.required}>*</Text>
+                </Text>
                 <TextInput
                   style={styles.input}
-                  value={formData.weight}
-                  onChangeText={(value) => handleInputChange('weight', value)}
-                  placeholder="0.00"
-                  keyboardType="numeric"
+                  value={formData.tag}
+                  onChangeText={(value) => handleInputChange('tag', value)}
+                  placeholder="e.g. AG-7429"
                   placeholderTextColor={color.onSurfaceVariant}
+                  onFocus={() => {
+                    setTimeout(() => scrollToInput(300), 100);
+                  }}
                 />
+                <Text style={styles.fieldHint}>
+                  The unique identifier visible on the animal's ear tag.
+                </Text>
               </View>
+
+              {/* Demographic Row */}
+              <View style={styles.row}>
+                <View style={styles.halfField}>
+                  <Text style={styles.label}>Gender</Text>
+                  <SexToggle
+                    value={formData.gender}
+                    onChange={(value) => handleInputChange('gender', value)}
+                  />
+                </View>
+                <View style={styles.halfField}>
+                  <Text style={styles.label}>Weight (kg)</Text>
+                  <TextInput
+                    style={styles.input}
+                    value={formData.weight}
+                    onChangeText={(value) => handleInputChange('weight', value)}
+                    placeholder="0.00"
+                    keyboardType="numeric"
+                    placeholderTextColor={color.onSurfaceVariant}
+                    onFocus={() => {
+                      setTimeout(() => scrollToInput(400), 100);
+                    }}
+                  />
+                </View>
+              </View>
+
+              {/* Categorization Row */}
+              <View style={styles.row}>
+                <View style={styles.halfField}>
+                  <Text style={styles.label}>Pen / Location</Text>
+                  <CustomDropdown
+                    value={formData.pen}
+                    onSelect={(value) => handleInputChange('pen', value)}
+                    options={[
+                      { label: 'North Pasture', value: 'north_pasture' },
+                      { label: 'East Corral', value: 'east_corral' },
+                      { label: 'Birthing Shed', value: 'birthing_shed' },
+                      { label: 'Quarantine', value: 'quarantine' },
+                    ]}
+                    placeholder="Select pen"
+                    visible={showPenDropdown}
+                    onToggle={() => setShowPenDropdown(!showPenDropdown)}
+                  />
+                </View>
+                <View style={styles.halfField}>
+                  <Text style={styles.label}>Status</Text>
+                  <CustomDropdown
+                    value={formData.status}
+                    onSelect={(value) => handleInputChange('status', value)}
+                    options={[
+                      { label: 'Active', value: 'active' },
+                      { label: 'In Treatment', value: 'treatment' },
+                      { label: 'Quarantined', value: 'quarantined' },
+                      { label: 'Sold', value: 'sold' },
+                    ]}
+                    placeholder="Select status"
+                    visible={showStatusDropdown}
+                    onToggle={() => setShowStatusDropdown(!showStatusDropdown)}
+                  />
+                </View>
+              </View>
+
+              {/* Submit Button */}
+              <Pressable style={styles.submitButton} onPress={handleSubmit}>
+                <Text style={styles.submitButtonText}>Save Cow Record</Text>
+                {/* <Icon name="save" size={20} color={color.onPrimary} /> */}
+              </Pressable>
             </View>
 
-            {/* Categorization Row */}
-            <View style={styles.row}>
-              <View style={styles.halfField}>
-                <Text style={styles.label}>Pen / Location</Text>
-                <CustomDropdown
-                  value={formData.pen}
-                  onSelect={(value) => handleInputChange('pen', value)}
-                  options={[
-                    { label: 'North Pasture', value: 'north_pasture' },
-                    { label: 'East Corral', value: 'east_corral' },
-                    { label: 'Birthing Shed', value: 'birthing_shed' },
-                    { label: 'Quarantine', value: 'quarantine' },
-                  ]}
-                  placeholder="Select pen"
-                  visible={showPenDropdown}
-                  onToggle={() => setShowPenDropdown(!showPenDropdown)}
+            {/* Right Column - Editorial */}
+            <View style={styles.editorialColumn}>
+              <View style={styles.heroCard}>
+                <Image
+                  source={CowTwoImage}
+                  style={styles.heroImage}
+                  resizeMode="cover"
                 />
+                <View style={styles.heroOverlay}>
+                  <Text style={styles.heroTitle}>Digital Stewardship</Text>
+                  <Text style={styles.heroSubtitle}>
+                    Precise records lead to better outcomes. Every entry contributes to the overall health of the agrarian ecosystem.
+                  </Text>
+                </View>
               </View>
-              <View style={styles.halfField}>
-                <Text style={styles.label}>Status</Text>
-                <CustomDropdown
-                  value={formData.status}
-                  onSelect={(value) => handleInputChange('status', value)}
-                  options={[
-                    { label: 'Active', value: 'active' },
-                    { label: 'In Treatment', value: 'treatment' },
-                    { label: 'Quarantined', value: 'quarantined' },
-                    { label: 'Sold', value: 'sold' },
-                  ]}
-                  placeholder="Select status"
-                  visible={showStatusDropdown}
-                  onToggle={() => setShowStatusDropdown(!showStatusDropdown)}
-                />
+
+              <View style={styles.guidelinesCard}>
+                <Text style={styles.guidelinesTitle}>Guidelines</Text>
+                <View style={styles.guideline}>
+                  {/* <Icon name="verified-user" size={20} color={color.primaryContainer} /> */}
+                  <Text style={styles.guidelineText}>
+                    Ensure the tag number matches the visual ID precisely to avoid database conflicts.
+                  </Text>
+                </View>
+                <View style={styles.guideline}>
+                  {/* <Icon name="medical-information" size={20} color={color.primaryContainer} /> */}
+                  <Text style={styles.guidelineText}>
+                    If the animal is undergoing medication, set status to{' '}
+                    <View><Text style={styles.statusBadge}>In Treatment</Text></View>.
+                  </Text>
+                </View>
               </View>
             </View>
-
-            {/* Submit Button */}
-            <Pressable style={styles.submitButton} onPress={handleSubmit}>
-              <Text style={styles.submitButtonText}>Save Cow Record</Text>
-              {/* <Icon name="save" size={20} color={color.onPrimary} /> */}
-            </Pressable>
           </View>
-
-          {/* Right Column - Editorial */}
-          <View style={styles.editorialColumn}>
-            <View style={styles.heroCard}>
-              <Image
-                source={{
-                  uri: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDYrrIOQ68I689gAT6x7hh3BhOYQ7o8ttgB8a_r4ulu06sH3noOk4AMhJckZYXrcQwCw_OxfvYjRm3C8hjsJ9Px9sXxfGnYKT8kOhV-PFu9kYkiKhx_l16x_dw0p1ffH55ne-D3bQ3lmY1ShdMyO_70MgtbMih51ySvNQhRkI2iwGSMRVADEfatYLu4X0H_G-_MmCrv0-3QRE9NrdXi4Y_moSbtmt9--kCQYblNlLShdaNPhOsMfmWF3zsWPz0sx4Apo8XCxBdaexY'
-                }}
-                style={styles.heroImage}
-                resizeMode="cover"
-              />
-              <View style={styles.heroOverlay}>
-                <Text style={styles.heroTitle}>Digital Stewardship</Text>
-                <Text style={styles.heroSubtitle}>
-                  Precise records lead to better outcomes. Every entry contributes to the overall health of the agrarian ecosystem.
-                </Text>
-              </View>
-            </View>
-
-            <View style={styles.guidelinesCard}>
-              <Text style={styles.guidelinesTitle}>Guidelines</Text>
-              <View style={styles.guideline}>
-                {/* <Icon name="verified-user" size={20} color={color.primaryContainer} /> */}
-                <Text style={styles.guidelineText}>
-                  Ensure the tag number matches the visual ID precisely to avoid database conflicts.
-                </Text>
-              </View>
-              <View style={styles.guideline}>
-                {/* <Icon name="medical-information" size={20} color={color.primaryContainer} /> */}
-                <Text style={styles.guidelineText}>
-                  If the animal is undergoing medication, set status to{' '}
-                  <View><Text style={styles.statusBadge}>In Treatment</Text></View>.
-                </Text>
-              </View>
-            </View>
-          </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
+      <BottomSheet
+        ref={bottomSheetRef}
+        title="Upload Photo"
+        height={400}
+        actions={[
+          {
+            title: 'Take Photo',
+            subtitle: 'Use camera to capture now',
+            onPress: () => {},
+            icon: CameraIcon
+          },
+          {
+            title: 'Choose from Gallery',
+            subtitle: 'Select an existing image',
+            onPress: () => {},
+            icon: GalleryIcon
+          },
+        ]}
+      />
     </SafeAreaView>
   );
 };
@@ -221,6 +289,10 @@ const styles = StyleSheet.create({
     paddingHorizontal:18
   },
 
+  keyboardAvoidingView: {
+    flex: 1,
+  },
+
   
 
   
@@ -229,7 +301,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingHorizontal: 18,
-    paddingBottom: 48,
+    paddingBottom: 100,
     paddingTop: 16,
   },
   headerSection: {
@@ -282,7 +354,16 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 8,
+    flexDirection: 'row',
+    gap: 12,
+  },
+  photoUploadIconPlaceholder: {
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    backgroundColor: color.surfaceVariant,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   photoText: {
     fontSize: 16,

@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
-import { StyleSheet, Pressable, FlatList, Image } from 'react-native';
+import { StyleSheet, Pressable, FlatList, Image, StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -38,9 +38,9 @@ const Herd = () => {
       // Apply filter filter
       let matchesFilter = true;
       if (selectedFilter !== 'All Animals') {
-        if (selectedFilter === 'Healthy' || selectedFilter === 'Active' || selectedFilter === 'In Treatment' || selectedFilter === 'Prime Bull') {
+        
           matchesFilter = cow.status === selectedFilter;
-        } 
+        
       }
 
       return matchesSearch && matchesFilter;
@@ -49,6 +49,7 @@ const Herd = () => {
 
   return (
     <SafeAreaView style={[styles.container]} edges={['top', 'left', 'right']}>
+      <StatusBar barStyle="dark-content" backgroundColor={color.surface} />
       <FlatList
         data={filteredCows}
         keyExtractor={item => item.id}

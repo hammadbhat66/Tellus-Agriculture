@@ -10,3 +10,5 @@ export const InsightsIcon = require('./insights/insights.png');
 export const BackIcon = require('./back/back.png');
 export const GreenTickIcon = require('./greentick/greentick.png');
 export const WeightIcon = require('./weight/weight.png');
+export const CameraIcon = require('./camera/camera.png');
+export const GalleryIcon = require('./gallery/gallery.png');

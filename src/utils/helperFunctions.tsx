@@ -16,6 +16,8 @@ export type ErrorType = {
         return color.primaryFixed;
       case 'Prime Bull':
         return color.onPrimary;
+      case 'Deceased':
+        return color.errorContainer;
       default:
         return color.primaryFixed;
     }
@@ -30,6 +32,8 @@ export const getStatusTextColor = (status: string) => {
         return color.onPrimary;
       case 'Prime Bull':
         return color.primary;
+      case 'Deceased':
+        return color.error;
       default:
         return color.onPrimaryFixedVariant;
     }
