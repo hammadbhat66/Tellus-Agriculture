@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Pressable, StyleSheet, Image } from 'react-native';
 import color from '../utils/theme/colors';
+import { ArrowDownIcon, ArrowUpIcon } from '../assets/icons/icons';
 
 type DropdownOption = {
   label: string;
@@ -29,7 +30,7 @@ const CustomDropdown = ({
       <Text style={[styles.dropdownText, !value && styles.placeholderText]}>
         {options.find(opt => opt.value === value)?.label || placeholder}
       </Text>
-      {/* <Icon name={visible ? 'expand-less' : 'expand-more'} size={24} color={color.onSurface} /> */}
+      <Image source={visible ? ArrowUpIcon : ArrowDownIcon} />
     </Pressable>
     {visible && (
       <View style={styles.dropdownList}>
