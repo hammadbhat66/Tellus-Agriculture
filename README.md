@@ -30,9 +30,13 @@ Since I did not have much time, I decided to use Google Stitch to create the des
    - Herd
    - Cow Details
    - Add New Cow
+- Other:
+
+8. I have emulated the authentication. When you press Start Cataloging in Landing page. it will emulate login and when you press profile image you will be prompted will logout alert.
 
 ## Trade-Offs
 
 1. Since the document does not tell me to mock the backend, I created `mockdata.json` to emulate the data.
 2. I have also not added many validations due to time constraints.
 3. I have not added other modules like camera and gallery image pickers, since I do not think they are covered in the scope, as there is no backend to upload the cow data.
+4. I have also prioratized IOS only due to time limitations
