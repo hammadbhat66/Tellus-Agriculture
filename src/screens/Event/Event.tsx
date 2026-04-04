@@ -4,6 +4,7 @@ const Event = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Event Screen</Text>
+            <Text>Note: Not in current scope</Text>
         </View>
     );
 };

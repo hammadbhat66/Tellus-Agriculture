@@ -4,6 +4,7 @@ const Inventory = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Inventory Screen</Text>
+            <Text>Note: Not in current scope</Text>
         </View>
     );
 };

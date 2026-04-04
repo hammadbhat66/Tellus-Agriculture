@@ -4,6 +4,7 @@ const Insight = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Insight Screen</Text>
+            <Text>Note: Not in current scope</Text>
         </View>
     );
 };

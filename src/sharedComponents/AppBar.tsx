@@ -4,7 +4,7 @@ import { BackIcon } from '../assets/icons/icons';
 import { UserImg } from '../assets/images/images';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { loginEmulate, logoutEmulate } from '../redux/auth';
+import { logoutEmulate } from '../redux/auth';
 
 type AppBarType = {
   leftIcon?: React.ReactNode;

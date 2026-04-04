@@ -105,7 +105,7 @@ const dispatch = useDispatch();
             <View style={[styles.dot, styles.dot2]} />
             <View style={[styles.dot, styles.dot3]} />
           </View>
-          <Text style={styles.loadingText}>Syncing Herd Data</Text>
+          <Text style={styles.loadingText}>Synced Herd Data</Text>
         </View>
       </Animated.View>
     </View>

@@ -1,6 +1,6 @@
 export const screenNames = {
     TAB_NAVIGATOR: 'TabNavigator',
-    SPLASH_SCREEN: 'SplashScreen',
+    LANDING_PAGE: 'LandingPage',
     HERD:"Herd",
     EVENT:"Event",
     INVENTORY:"Inventory",

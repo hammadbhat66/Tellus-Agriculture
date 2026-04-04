@@ -37,7 +37,7 @@ const AuthRoutes: FC = () => {
           name={screenNames.TAB_NAVIGATOR}
           component={TabNavigator}
         />
-        <Stack.Screen name={screenNames.ADD_NEW_COW} component={AddNewCow} options={{presentation:"fullScreenModal"}} />
+        <Stack.Screen name={screenNames.ADD_NEW_COW} component={AddNewCow} options={{presentation:"modal"}} />
         <Stack.Screen name={screenNames.COW_DETAILS} component={CowDetails} />
       </Stack.Navigator>
     </View>
