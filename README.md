@@ -33,6 +33,7 @@ Since I did not have much time, I decided to use Google Stitch to create the des
 - Other:
 
 8. I have emulated the authentication. When you press Start Cataloging in Landing page. it will emulate login and when you press profile image you will be prompted will logout alert.
+9. I have handled Offline by showing basic No Internet connection due to limited scope and time.
 
 ## Trade-Offs
 
